@@ -224,7 +224,8 @@ class GameParserController extends Controller
             $ranking[$player->name]['player'] = $player->name;
         }
         arsort($ranking);
-        return view('task3')->with('ranking', $ranking);;
+        //return redirect()->route('task3', [$ranking]);
+        return view('task3')->with('ranking', $ranking);
     }
 
     public function read($path){

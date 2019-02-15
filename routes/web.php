@@ -18,5 +18,6 @@ Route::get('/', function () {
 Route::get('/task1', 'GameParserController@task1');
 Route::get('/task2', 'GameParserController@task2');
 Route::get('/task3', 'GameParserController@task3');
-Route::post('/search', 'GameParserController@search');
-Route::get('/search', 'GameParserController@search');
+Route::get('/task3', 'GameParserController@task3');
+Route::post('/task3', 'GameParserController@search');
+Route::get('/task3', 'GameParserController@search');
