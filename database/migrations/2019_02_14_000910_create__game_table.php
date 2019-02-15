@@ -15,8 +15,9 @@ class CreateGameTable extends Migration
     {
         Schema::create('game', function (Blueprint $table) {
             $table->increments('id');
-            $table->time('time_start');
-            $table->time('time_end');
+            $table->string('name');
+            $table->string('time_start');
+            $table->string('time_end')->nullable();;
             $table->timestamps();
             $table->softDeletes();
         });

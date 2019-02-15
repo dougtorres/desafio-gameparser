@@ -7,28 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Player extends Model
 {
     private $name;
-    private $kills;
+    protected $primaryKey = 'id';
+    public $incrementing = true;
+    protected $table = 'player';
 
     public function __construct($name)
     {
-        $this->name;
-        $this->kills = array();
+        $this->name = $name;
     }
 
     public function getName(){
         return $this->name;
     }
 
-    public function getKills(){
-        return $this->kills;
-    }
-
-    public function addKill($kill){
-        if(array_push($this->kills, $kill))
-        return true;
-        else {
-            echo "error";
-            die;
-        }
-    }
 }

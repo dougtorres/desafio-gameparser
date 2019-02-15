@@ -15,10 +15,10 @@ class CreateKillTable extends Migration
     {
         Schema::create('kill', function (Blueprint $table) {
             $table->increments('id');
-            $table->time('time_kill');
-            $table->integer('game_id');
-            $table->integer('player_killer');
-            $table->integer('player_dead');
+            $table->string('time_kill');
+            $table->string('game_name');
+            $table->string('player_killer');
+            $table->string('player_dead');
             $table->string('killed_by');
             $table->timestamps();
             $table->softDeletes();
